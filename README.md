@@ -45,10 +45,10 @@ end
 let count l =
   let aux l n =
     match l with
-    | Empty -> n
-    | Cons (h, t) -> aux t (1 + n)
+      | [] -> n
+      | _ :: t -> aux t (n - 1)
   in
-  aux l 0
+  aux l
 end
 ```
 
